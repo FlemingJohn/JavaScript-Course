@@ -1,4 +1,4 @@
-// Variable scope -  defines the accessiblit of the variable
+// Variable scope -  defines the accessibility of a variable.
 // types block scope and function scope
 // block scope - defines inside the curly brackets (let and const)
 // function scope - accessed inside only the function (var)
@@ -29,11 +29,16 @@ const name3 = "fleming";
 
 function logBlockName(){
     const name3 = "john";
+    console.log("Inside function, before block:", name3);
+
     if(true){
-        const name = "King";
-        console.log(name3);
+        const blockScopedName = "King"; // Block-scoped
+        console.log("Inside block:", blockScopedName); // "King"
+        console.log("Inside block, accessing function scope:", name3); // "john"
     }
-    console.log(name3);
+    
+    // console.log(blockScopedName); // This would cause a ReferenceError because blockScopedName is not accessible here.
+    console.log("Inside function, after block:", name3);
 }
 
 console.log(name3);

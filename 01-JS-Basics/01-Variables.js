@@ -1,7 +1,9 @@
 // variables - used to store values 
 // types - var, let and const 
-// var and cont - immutable
-// let - mutable 
+
+// let - mutable (can be reassigned)
+// var - mutable (can be reassigned - older way, generally avoid)
+// const - immutable (cannot be reassigned). The value of a const object/array can be changed, but the variable cannot point to a new object/array.
 
 // defining the variables
 var x = 10;
